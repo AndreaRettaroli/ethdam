@@ -17,13 +17,14 @@ artifacts:
     compose: compose.yaml
 deployments:
   default:
-    app_id: rofl1qq3tue6d0373mhpnd4ftt724ttapjdmvqs25s048
+    app_id: rofl1qpqyq3nl0hnz470xghxt6z7vp64a59quzs7q532n
     network: testnet
     paratime: sapphire
     admin: andrea
+    oci_repository: ghcr.io/andrearettaroli/ethdam:latest
     trust_root:
-      height: 26533918
-      hash: 207b206ad584a1ca99b549b728273a6a0c968208fd48488cccf3ddd0bd1dad6a
+      height: 26537707
+      hash: 0bc603cd02fb88237b5b1750f089a19c352521119ebaafe3ff933850476a2b2f
     policy:
       quotes:
         pcs:
@@ -31,12 +32,17 @@ deployments:
           min_tcb_evaluation_data_number: 18
           tdx: {}
       enclaves:
-        - id: QdLbGRxB76jtFnif+UgVugR+iCma5uhMb9LDJ9pnnsoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-        - id: Xz5OLJ+Mix72Wo3eRn5InrjTtrZrEinktFBQMF706jQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: NlX8Th2ujzafTVHbrZseBE5Et2xjkmgdgliyQLJa2XUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: asXCePOtKNIcKlkCYWLVlz/55fm/P/aNvnDodz0apgkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
       endorsements:
         - any: {}
       fees: endorsing_node
       max_expiration: 3
     secrets:
       - name: TOKEN
-        value: pGJwa1ggLYNRvZVuExKCt+assoLi0IYPPZ1UZgi3GvURkB9tYmhkbmFtZVVOxL47pCSeZrBd2Q7sJ57+NDo9JEtlbm9uY2VPK6+PgBjZftj4XbtCXx/SZXZhbHVlWD7V6BXKucM0vlEn6FvSU/3ft8SPaqlYgueNzeih/WZO3eLmhbhdYElpR6EwIERAOI+EaY2FvQ0BJawXcMzCSQ==
+        value: pGJwa1ggKqF0Cgi/RZSR+bFYOUTC8OwOPLrhslm751C6m1iO0CBkbmFtZVXdhsu5ODfuGJdnAuJlGIyS9y/RK49lbm9uY2VPBIh4wjKDFxEI33BOVqK5ZXZhbHVlUAFuYh4qVjOmLA/Z38S4m1M=
+    machines:
+      default:
+        provider: oasis1qp2ens0hsp7gh23wajxa4hpetkdek3swyyulyrmz
+        offer: playground_short
+        id: "0000000000000056"

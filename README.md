@@ -24,6 +24,15 @@ pull latest image:
 ```
 docker pull andrearettaroli/test:latest
 ```
+# docker build gh image
+```
+docker build -t ghcr.io/andrearettaroli/ethdam:latest .
+```
+
+# docker push gh image
+```
+docker push ghcr.io/andrearettaroli/ethdam:latest  
+```
 
 ## Rofl setup:
 
@@ -63,7 +72,7 @@ Created ROFL app: rofl1qq3tue6d0373mhpnd4ftt724ttapjdmvqs25s048
 5. 
 build rofl image on MacOS:
 ```
-docker run --platform linux/amd64 --volume .:/src -it andrearettaroli/test:latest oasis rofl build
+docker run --platform linux/amd64 --volume .:/src -it ghcr.io/oasisprotocol/rofl-dev:main oasis rofl build
 ```
 
 6. setup secrets:
@@ -78,6 +87,11 @@ oasis rofl update
 8. deploy rofl:
 ```
 oasis rofl deploy
+```
+
+9. tx result
+```
+9ecf7f1825aa48b388183f1edc618a162ae959a8901aa64a5c5fd3879c4aa8b8
 ```
 
 

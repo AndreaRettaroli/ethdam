@@ -25,6 +25,10 @@ app.use(
         price: "$0.001",
         network: "base-sepolia",
       },
+      "/test": {
+        price: "$0.005",
+        network: "base-sepolia",
+      },
     },
     {
       url: facilitatorUrl,
@@ -37,6 +41,14 @@ app.get("/weather", (c) => {
     report: {
       weather: "sunny",
       temperature: 70,
+    },
+  });
+});
+
+app.get("/test", (c) => {
+  return c.json({
+    report: {
+      value: "hallo",
     },
   });
 });
