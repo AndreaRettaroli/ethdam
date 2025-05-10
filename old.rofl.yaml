@@ -3,11 +3,11 @@ version: 0.1.0
 tee: tdx
 kind: container
 resources:
-  memory: 512
+  memory: 2048
   cpus: 1
   storage:
     kind: disk-persistent
-    size: 512
+    size: 2048
 artifacts:
   firmware: https://github.com/oasisprotocol/oasis-boot/releases/download/v0.4.2/ovmf.tdx.fd#db47100a7d6a0c1f6983be224137c3f8d7cb09b63bb1c7a5ee7829d8e994a42f
   kernel: https://github.com/oasisprotocol/oasis-boot/releases/download/v0.4.2/stage1.bin#02903bd0ddfe1e3552e95767f1be17e801690d73d90bb1e800aa4879ba46c4d7
@@ -17,13 +17,13 @@ artifacts:
     compose: compose.yaml
 deployments:
   default:
-    app_id: rofl1qq3tue6d0373mhpnd4ftt724ttapjdmvqs25s048
+    app_id: rofl1qqnaa56ef7r2t9jv8c4jqrj5fc9la4nmrvx0hyqc
     network: testnet
     paratime: sapphire
     admin: andrea
     trust_root:
-      height: 26533918
-      hash: 207b206ad584a1ca99b549b728273a6a0c968208fd48488cccf3ddd0bd1dad6a
+      height: 26532698
+      hash: 8ff2dea75515b92c12f9fe606c31c6751f4081b4bd5ae23edd44eb4c3bb2ac7f
     policy:
       quotes:
         pcs:
@@ -31,12 +31,12 @@ deployments:
           min_tcb_evaluation_data_number: 18
           tdx: {}
       enclaves:
-        - id: QdLbGRxB76jtFnif+UgVugR+iCma5uhMb9LDJ9pnnsoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-        - id: Xz5OLJ+Mix72Wo3eRn5InrjTtrZrEinktFBQMF706jQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - fobWjvcjnaCPIMN0d5dwx/Spt6x0WWLneLPBf8SIrUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - 1hskIzQdq5MzkPwYONLRZWA9jFUuRbgMw8DE1SErvnUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
       endorsements:
         - any: {}
       fees: endorsing_node
       max_expiration: 3
     secrets:
       - name: TOKEN
-        value: pGJwa1ggLYNRvZVuExKCt+assoLi0IYPPZ1UZgi3GvURkB9tYmhkbmFtZVVOxL47pCSeZrBd2Q7sJ57+NDo9JEtlbm9uY2VPK6+PgBjZftj4XbtCXx/SZXZhbHVlWD7V6BXKucM0vlEn6FvSU/3ft8SPaqlYgueNzeih/WZO3eLmhbhdYElpR6EwIERAOI+EaY2FvQ0BJawXcMzCSQ==
+        value: pGJwa1ggoEKJVORd2xjm7wLWoHRdeXtxCMcbpyE3kk3yL7lsWkJkbmFtZVW6rBBEwdgNletK8XKOqNaCkI4zRcNlbm9uY2VPoswRZqQ/GY/Xv9wPgMxkZXZhbHVlWD4y3rw2BLxwFa5cDBDskp29N6c15YZ3KINZt5QcOOO85hBduwLCj77cnS0t+7iEtjYKjQUlaGx9FjMqPcs4XA==

@@ -55,6 +55,11 @@ https://faucet.testnet.oasis.io/
 oasis rofl init
 oasis rofl create --network testnet --account <wallet-name>
 ```
+
+result:
+```
+Created ROFL app: rofl1qq3tue6d0373mhpnd4ftt724ttapjdmvqs25s048
+```
 5. 
 build rofl image on MacOS:
 ```
