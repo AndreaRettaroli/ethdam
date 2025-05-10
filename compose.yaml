@@ -1,0 +1,8 @@
+services:
+  python-telegram-bot:
+    build: .
+    image: "docker.io/andrearettaroli/test:latest"
+    platform: linux/amd64
+    environment:
+      - TOKEN=${TOKEN}
+
