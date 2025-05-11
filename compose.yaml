@@ -30,12 +30,14 @@ services:
   server:
     build:
       context: ./server-hono
+    image: ghcr.io/andrearettaroli/server:latest
     expose:
       - 4021
     restart: unless-stopped
   mcp:
     build:
       context: ./mcp
+    image: ghcr.io/andrearettaroli/mcp:latest
     environment:
       - NODE_ENV=production
       - PORT=${MCP_PORT:-4000}
@@ -50,6 +52,7 @@ services:
     build:
       context: .
     command: python telegram_mcp_bot.py
+    image: ghcr.io/andrearettaroli/ethdam:latest
     environment:
       - TOKEN=${TOKEN}
       - MCP_HOST=mcp
