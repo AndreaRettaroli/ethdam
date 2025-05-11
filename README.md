@@ -1,35 +1,32 @@
+## Guide feedback
+
+https://github.com/oasisprotocol/oasis-sdk/pull/2213
 
 
 ## Build images
 
-```
-docker login
-```
 
 build and push:
 ```
-docker buildx build \
-  --platform linux/amd64,linux/arm64 \
-  --push \
-  -t andrearettaroli/test:latest \
-  .
+docker compose build
 ```
 
-image:
+push images:
 ```
-docker.io/andrearettaroli/test:latest
+docker compose push
 ```
 
 pull latest image:
 ```
 docker pull andrearettaroli/test:latest
 ```
-# docker build gh image
+
+or docker build gh image
 ```
 docker build -t ghcr.io/andrearettaroli/ethdam:latest .
 ```
 
-# docker push gh image
+docker push gh image
 ```
 docker push ghcr.io/andrearettaroli/ethdam:latest  
 ```
