@@ -5,4 +5,15 @@ services:
     platform: linux/amd64
     environment:
       - TOKEN=${TOKEN}
-
+  eliza-database:
+    image: ankane/pgvector
+    container_name: eliza-database
+    environment:
+      POSTGRES_DB: eliza-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: dev
+    ports:
+      - "5000:5432"
+    # volumes:
+    #   - db-data:/var/lib/postgresql/data
+    restart: always
