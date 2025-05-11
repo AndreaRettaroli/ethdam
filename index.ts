@@ -48,7 +48,7 @@ import { wrapFetchWithPayment, decodeXPaymentResponse } from "x402-fetch";
 //   throw new Error("Missing environment variables");
 // }
 const url = "http://localhost:4021";
-const endpointPath = "/test";
+const endpointPath = "/weather";
 const account = privateKeyToAccount(
   "0x0b9d9eeee8ebf54efdcd242ded9ce35193983dcca4afbe98367e5dcb11c93ce7"
 );
@@ -65,7 +65,7 @@ async function main() {
   console.log("🚀 ~ main ~ body:", body);
 
   const paymentResponse = decodeXPaymentResponse(
-    res.headers.get("x-payment-response")!
+    res.headers.get("x-payment")!
   );
 
   // .then(async (response) => {
