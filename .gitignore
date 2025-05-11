@@ -9,4 +9,4 @@ node_modules/*
 node_modules
 openai_config.json
 
-elizadb/*
+env-setter.sh
