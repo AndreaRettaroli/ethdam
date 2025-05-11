@@ -1,0 +1,6 @@
+# keep the context clean
+node_modules
+dist
+pnpm-store
+.DS_Store
+*.log

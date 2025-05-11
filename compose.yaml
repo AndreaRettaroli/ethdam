@@ -27,7 +27,12 @@ services:
   #   # volumes:
   #   #   - db-data:/var/lib/postgresql/data
   #   restart: always
-
+  server:
+    build:
+      context: ./server-hono
+    expose:
+      - 4021
+    restart: unless-stopped
   mcp:
     build:
       context: ./mcp
@@ -37,11 +42,13 @@ services:
     expose:
       - "${MCP_PORT:-4000}"
     restart: unless-stopped
+    depends_on:
+      - server
     
 
   bot:
     build:
-      context: ./bot
+      context: .
     command: python telegram_mcp_bot.py
     environment:
       - TOKEN=${TOKEN}
