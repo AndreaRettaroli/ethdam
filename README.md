@@ -2,6 +2,7 @@
 
 https://github.com/oasisprotocol/oasis-sdk/pull/2213
 
+https://github.com/elizaOS/eliza/issues/4528
 
 ## Build images
 
